@@ -1,0 +1,58 @@
+/**
+ * Add your modifications here.
+ */
+
+
+a:hover{color: purple;}
+
+
+.user{color: red;}
+
+
+
+
+.site-navigation a:hover,
+	.site-navigation .sub-menu .has-children:hover > a {
+		color: #FFEB99;
+	}
+
+
+.site-navigation{color: white;}
+
+
+.clearfix{padding-bottom: -100px;}
+
+
+.footer-links{background-image: none;}
+
+.credits{background: none;  background-image: none;}
+
+
+
+.footer-links .credits:before,
+		.footer-navigation li:before {background: none;  background-image: none;}
+
+
+
+		.icon-flickr-circled  {color: red;}
+
+
+
+
+
+		.flickr{padding-top :0px;  padding-right:  30px;  color: #99999;}
+
+		.fa .fa-flickr .fa-2x .flickr a:hover {color:  red;}
+
+
+			
+
+
+
+
+
+
+
+
+
+
