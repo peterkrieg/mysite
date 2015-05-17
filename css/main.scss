@@ -1,8 +1,22 @@
+@import "bourbon/bourbon";
 
+
+
+
+
+html, body{
+	height: 100%;
+}
+
+.mycontainer{
+	width: 100%;
+}
 
 
 
 h1,h2,h3,h4,h5,h6{
+	text-align: center;
+	color: #3A539B;
 	font-family: 'Noto Sans', sans-serif;
 }
 
@@ -14,5 +28,23 @@ body{
 h1{
 	font-size: 60px;
 	font-weight: bold;
+}
+
+.intro{
 	text-align: center;
+}
+
+
+.portfoliobox{
+	text-align: center;
+	height: 200px;
+	width: 200px;
+	background: darkblue;
+	border: 0px orange solid;
+	@include transition(.8s ease);
+	&:hover{
+		border: 20px orange solid;
+		@include transform(rotate(45deg));
+		@include transition(1.5s ease);
+	}
 }
