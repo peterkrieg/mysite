@@ -2,6 +2,9 @@
 
 
 
+@font-face { font-family: Mohave; src: url('../fonts/Mohave.otf'); } 
+@font-face { font-family: Anson; src: url('../fonts/anson-regular-webfont.ttf'); } 
+
 
 
 html, body{
@@ -17,7 +20,8 @@ html, body{
 h1,h2,h3,h4,h5,h6{
 	text-align: center;
 	color: #3A539B;
-	font-family: 'Noto Sans', sans-serif;
+	// font-family: Mohave, sans-serif;
+	font-family: Anson, sans-serif;
 }
 
 body{
@@ -26,7 +30,7 @@ body{
 }
 
 h1{
-	font-size: 60px;
+	font-size: 80px;
 	font-weight: bold;
 }
 
@@ -35,16 +39,20 @@ h1{
 }
 
 
+
 .portfoliobox{
+	max-height: 275px;
+	margin: auto;
 	text-align: center;
-	height: 200px;
-	width: 200px;
+	height: 275px;
+	width: 275px;
 	background: darkblue;
-	border: 0px orange solid;
-	@include transition(.8s ease);
+	@include transition(.3s ease);
 	&:hover{
-		border: 20px orange solid;
-		@include transform(rotate(45deg));
-		@include transition(1.5s ease);
+		// background: tomato;
+		max-height: 0px;
+		top: 100px;
+		@include transition(.8s ease);
 	}
+	
 }
