@@ -1,6 +1,11 @@
 $(function(){
 	
 
+	// This prevents bootstrap from focusing on links when clicked
+	$('a').click(function(){
+		$(this).blur();
+	});
+
 	// Dynamically adjusts height of portfolio box to always dislay a 8:5 ratio width to height
 
 	var $portfoliobox = $('div.portfoliobox');
