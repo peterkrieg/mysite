@@ -10,12 +10,67 @@
 
 
 
+$smallphone: "(max-width: 560px)";
+$phone: "(min-width: 561px)";
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 992px)";
+$largedesktop: "(min-width: 1200px)";
+
+// ------------------------Mixins-----------------------------
+
+@mixin smallphone {
+	@media #{$smallphone} {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media #{$phone} {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media #{$tablet} {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media #{$desktop} {
+		@content;
+	}
+}
+
+@mixin largedesktop {
+	@media #{$largedesktop} {
+		@content; 
+	}
+}
+
+@mixin phoneOnly{
+	@media #{$phoneOnly} {
+		@content;
+	}
+}
+
+@mixin tabletOnly{
+	@media #{$tabletOnly} {
+		@content;
+	}
+}
+
+
+// ---------------------------GENERAL RULES-----------------------------
+
+
 html, body{
 	height: 100%;
 }
 
 .mycontainer{
 	width: 100%;
+	background: orange;
 }
 
 
@@ -59,19 +114,104 @@ h2{
 
 
 
-.portfoliobox{
-	max-height: 275px;
-	margin: auto;
-	text-align: center;
-	height: 275px;
-	width: 275px;
-	background: darkblue;
-	@include transition(.3s ease);
-	&:hover{
-		// background: tomato;
-		max-height: 0px;
-		top: 100px;
-		@include transition(.8s ease);
+
+// -------------------------Portfolio Section-----------------------------
+section.portfolio{
+	div.portfolio-inner-container{
+		max-width: 1600px;
+		width: 95%;
+		background: green;
 	}
+
+
+
+
+	.portfoliobox{
+		position: relative;
+		width: 100%;	
+		height: 200px; // will be overwritten by jquery to adjust based on width
+		margin: auto;
+		margin-bottom: 20px;
+		text-align: center;
+		background: darkblue;
+		overflow: hidden;
+
+		@include transition(.3s ease);
+		&:hover{
+			background-size: 130% 118.75%;
+			div.transparent-box{
+				opacity: .9;
+			}
+			div.circle-plus{
+				top: 10%;
+				opacity: 1;
+			}
+		}
+
+
+		a.portfolio-modal{
+			text-decoration: none;
+			display: block;
+			height: 100%;
+		}
+		div.transparent-box{
+			position: absolute;
+			@include transition(.3s ease);
+			opacity: 0;
+			background: #222;
+			height: 100%;
+			width: 100%;
+		}
+		div.circle-plus{
+			opacity: 0;
+			top: -10%;
+			@include transition(.3s ease);
+			position: relative;;
+			display: block;
+			border-radius: 100px;
+			width: 200px;
+			height: 200px;
+			border: 5px solid white;
+			margin: auto;
+		}
+		p.portfolio-learn-more{
+			display: inline;
+			background: red;
+			font-size: 20px;
+			@include transition(.3s ease);
+			color: white;
+			position: relative;
+			top: 25%;
+		}
+		p.plus{
+			font-size: 80px;
+			background: orange;
+			display: inline;
+		}
+	}
+
 	
+
+	.checkmate{
+		background: url('../img/portfolio/checkmate-small.jpg') no-repeat 40% 60%;
+		background-size: 100% 100%;
+	}
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
