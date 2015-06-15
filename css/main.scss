@@ -133,10 +133,27 @@ section.intro{
 		font-size: 30px;
 	}
 
-	.intro{
-		text-align: center;
+
+	a.blog-link{
+		text-decoration: underline;
+		&:hover{
+			color: black;
+		}
 	}
-}
+	p{
+		margin: auto;
+		text-align: left;
+		text-indent: 30px;
+		@include tablet{
+			text-align: left;
+			width: 90%;
+			margin: auto;
+			line-height: 24px;
+		}
+	}
+
+} //end of intro section---------------------
+
 
 
 
@@ -257,11 +274,11 @@ section.portfolio{
 		background: url('../img/portfolio/thesis-small.jpg') no-repeat 40% 60%;
 		background-size: 100% 100%;
 	}
-	div.sdabroad{
-		background: url('../img/portfolio/sdabroad-small.jpg') no-repeat 40% 60%;
+	div.frisbee{
+		background: url('../img/portfolio/frisbee-small.jpg') no-repeat 40% 60%;
 		background-size: 100% 100%;
 	}
-	div.blog{
+	div.sdabroad{
 		background: url('../img/portfolio/sdabroad-small.jpg') no-repeat 40% 60%;
 		background-size: 100% 100%;
 	}
