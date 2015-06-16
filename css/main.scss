@@ -287,6 +287,23 @@ section.portfolio{
 
 
 
+	// Modals, within the portfolio section still
+
+	div.modal{
+		// text-align: center;
+		div.modal-dialog{
+			// width: 100%;
+			div.modal-content{
+				// margin: auto;
+				// width: 80%;
+				@include tablet{
+					// width: 60%;
+				}
+			}
+		}
+	}
+
+
 
 }
 
