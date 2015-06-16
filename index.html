@@ -2,6 +2,7 @@
 <html lang="en-us">
 <head>
 	<meta charset="UTF-8">
+	<title>My Personal Portfolio Site</title>
 	<!-- JQUERY CDN -->
 	<script src="http://code.jquery.com/jquery-2.1.3.min.js"> </script>
 	<!-- Latest compiled and minified CSS -->
@@ -60,7 +61,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="portfoliobox photo">
-						<a href="http://google.com" class="portfolio-modal">
+						<a href="#" class="portfolio-modal" data-toggle="modal" data-target="#photo-modal">
 							<div class="transparent-box">
 							</div>
 							<div class="circle-plus">
@@ -72,7 +73,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="portfoliobox sly">
-						<a href="http://google.com" class="portfolio-modal">
+						<a href="#" class="portfolio-modal" data-toggle="modal" data-target="#sly-modal">
 							<div class="transparent-box">
 							</div>
 							<div class="circle-plus">
@@ -84,7 +85,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="portfoliobox thesis">
-						<a href="http://google.com" class="portfolio-modal">
+						<a href="#" class="portfolio-modal" data-toggle="modal" data-target="#thesis-modal">
 							<div class="transparent-box">
 							</div>
 							<div class="circle-plus">
@@ -96,7 +97,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="portfoliobox frisbee">
-						<a href="http://google.com" class="portfolio-modal">
+						<a href="#" class="portfolio-modal" data-toggle="modal" data-target="#frisbee-modal">
 							<div class="transparent-box">
 							</div>
 							<div class="circle-plus">
@@ -108,7 +109,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="portfoliobox sdabroad">
-						<a href="http://google.com" class="portfolio-modal">
+						<a href="#" class="portfolio-modal" data-toggle="modal" data-target="#sdabroad-modal">
 							<div class="transparent-box">
 							</div>
 							<div class="circle-plus">
@@ -120,7 +121,8 @@
 				</div>
 			</div>
 
-			<!-- Modals That display more content -->
+			<!-- _____________________Modals That display more content__________________ -->
+
 			<div class="modal fade" id="checkmate-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -139,6 +141,102 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" >My Photo Site</h4>
+						</div>
+						<div class="modal-body">
+							<p>A few years ago, I wanted to pursue a career as a wedding photographer.  I realized I needed a portfolio website to display my work, and I went through the painful process of trying to put together a decent work.  I only understand HTML and basic CSS at the time, but managed to use code from free wordpress templates to make the site.</p>
+							<p>This site is in bad need of some bug fixes and an overhaul of the code, which I will get around to eventually.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a href="http://peterkrieg.com/checkmate" target="_blank"><button type="button" class="btn btn-primary">Visit Site</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="sly-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" >Sly's Barber Shop</h4>
+						</div>
+						<div class="modal-body">
+							<p>In the summer of 2014, I was looking for practice making websites.  I realized the barbershop I went to didn't have a website and I thought they could benefit from one.  I proposed free haircuts in exchange for the website--what a great deal! </p>
+							<p>This site is based heavily on a bootstrap template, and is messy code.  But I came up with the design, logo, and all photography.  I managed SEO and eventually had the page getting 50+ unique visitors per week.  Sly actually noticed an increase in business which was great.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a href="http://slysbarbershop.com" target="_blank"><button type="button" class="btn btn-primary">Visit Site</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="thesis-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" >My College Senior Thesis</h4>
+						</div>
+						<div class="modal-body">
+							<p>I was a physics major at Bates College and needed to write a thesis in the Fall of 2014.  At the time I was in the midst of learning JavaScript, and wanted a thesis that could combine my interests of programming with the mandatory physics material.  I decided to write my thesis on physics mechanical simulations using JavaScript.</p>
+							<p>Basically my thesis was just a bunch of bouncing balls!  But the code behind those bouncing balls involved JavaScript concepts like prototypes, inheritance, and window animations. </p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a href="http://peterkrieg.com/thesis" target="_blank"><button type="button" class="btn btn-primary">Visit Site</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="frisbee-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" >Bates Men's Ultimate Frisbee</h4>
+						</div>
+						<div class="modal-body">
+							<p>I was a captain of the men's ultimate frisbee team at Bates, and created the team website as practice.  I designed the look and feel of the website, along with taking all of the photography.   </p>
+							<p>This website was created from a bootstrap template.  I will eventually redo this website from scratch and make it more modular.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a href="http://abacus.bates.edu/people/orgs/ultimate/" target="_blank"><button type="button" class="btn btn-primary">Visit Site</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" id="sdabroad-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" >Summer Destinations</h4>
+						</div>
+						<div class="modal-body">
+							<p>A friend of mine needed a website for a start-up.  I created this website the summer of 2014, with pretty bad code.  It is based on a bootstrap template, which isn't the best practice to make the site your own, which I realized later.</p>
+							<p>The start-up didn't continue and so the site isn't used for anything now.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a href="http://peterkrieg.com/sdabroadtest/index2.html" target="_blank"><button type="button" class="btn btn-primary">Visit Site</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
 
 		</div>
 	</section>
