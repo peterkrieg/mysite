@@ -120,7 +120,10 @@ body{
 section.intro{
 	text-align: center;
 	h1{
-		font-size: 70px;
+		font-size: 50px;
+		@include phone{
+			font-size: 70px;
+		}
 		font-weight: 300;
 		text-transform: capitalize;
 		letter-spacing: 2px;
@@ -130,12 +133,15 @@ section.intro{
 	}
 
 	h2{
-		font-size: 30px;
+		font-size: 25px;
+		@include phone{
+			font-size: 30px;
+		}
 		margin-bottom: 40px;
 	}
 
 
-	a.blog-link{
+	a{
 		text-decoration: underline;
 		&:hover{
 			color: black;
@@ -290,14 +296,13 @@ section.portfolio{
 	// Modals, within the portfolio section still
 
 	div.modal{
-		// text-align: center;
 		div.modal-dialog{
-			// width: 100%;
 			div.modal-content{
-				// margin: auto;
-				// width: 80%;
-				@include tablet{
-					// width: 60%;
+				h4.modal-title{
+					font-size: 23px;
+					@include tablet{
+						font-size: 30px;
+					}
 				}
 			}
 		}
