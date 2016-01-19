@@ -2,10 +2,10 @@
 
 
 
-@font-face { font-family: Mohave; src: url('../fonts/Mohave.otf'); } 
-@font-face { font-family: adamcg; src: url('../fonts/adamcg.otf'); } 
-@font-face { font-family: nevis; src: url('../fonts/nevis.ttf'); } 
-@font-face { font-family: Anson; src: url('../fonts/anson-regular-webfont.ttf'); } 
+// @font-face { font-family: Mohave; src: url('../fonts/Mohave.otf'); } 
+// @font-face { font-family: adamcg; src: url('../fonts/adamcg.otf'); } 
+// @font-face { font-family: nevis; src: url('../fonts/nevis.ttf'); } 
+// @font-face { font-family: Anson; src: url('../fonts/anson-regular-webfont.ttf'); } 
 
 
 
@@ -87,13 +87,6 @@ a{
 h1,h2,h3,h4,h5,h6{
 	text-align: center;
 	color: #191919;
-	// font-family: Anson, sans-serif;
-	// font-family: Motserrat, sans-serif;
-	// font-family: 'Playfair-Display',  serif;
-	// font-family: 'Mohave', sans-serif;
-	// font-family: 'adamcg', sans-serif;
-	// font-family: 'nevis', sans-serif;
-	// font-family: 'Open-Sans', sans-serif;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 
@@ -106,7 +99,7 @@ h1,h2,h3,h4,h5,h6{
 
 body{
 	color: #191919;
-	background: #EFEFEF;
+	background: #eee;
 	// font-family: 'Playfair-Display',  serif;
 	font-family: 'Quattrocento', serif;
 	font-size: 16px;
@@ -137,7 +130,7 @@ section.intro{
 		@include phone{
 			font-size: 30px;
 		}
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 
 
@@ -147,19 +140,47 @@ section.intro{
 			color: black;
 		}
 	}
+
+	.weak-gray{
+		color: #999;
+		font-style: italic;
+	}
+
+	p.skills, p.tech{
+		text-indent: 0;
+	}
+	p.skills{
+		span{
+			position: relative;
+			left: 30px;
+		}
+	}
+
+	p.tech{
+		margin-bottom: 20px;
+		span{
+			position: relative;
+			left: 30px;
+		}
+	}
+
+
+
+
+
 	p{
 		margin: auto;
 		text-align: left;
 		text-indent: 30px;
 		text-align: left;
 		width: 100%;
-		@include tablet{
-			width: 90%;
-		}
 		margin: auto;
-		line-height: 24px;
-		&:first-of-type{
-			margin-bottom: 20px;
+		line-height: 26px;
+		&.intro{
+			margin-bottom: 10px;
+		}
+		@include tablet {
+			width: 90%;
 		}
 	}
 
@@ -182,7 +203,6 @@ section.portfolio{
 	margin: 50px 0;
 	padding: 20px 0;
 	border-top: 1px solid #121212;
-	background: #F2F1EF;
 	h2{
 		font-size: 40px;
 		margin-bottom: 30px;
@@ -204,7 +224,7 @@ section.portfolio{
 		margin: auto;
 		margin-bottom: 20px;
 		text-align: center;
-		background: darkblue;
+		background: #222;
 		overflow: hidden;
 
 		@include transition(.3s ease);
@@ -265,6 +285,17 @@ section.portfolio{
 		}
 	}
 
+	
+	div.kronolearn{
+		background: url('../img/portfolio/kronolearn.jpg') no-repeat 40% 60%;
+		background-size: 100% 100%;
+	}
+	
+
+	div.mediascore{
+		background: url('../img/portfolio/mediascore.jpg') no-repeat 40% 60%;
+		background-size: 100% 100%;
+	}
 	
 
 	div.checkmate{
