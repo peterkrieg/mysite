@@ -1,398 +1,111 @@
 @import "bourbon/bourbon";
-
-
-
-// @font-face { font-family: Mohave; src: url('../fonts/Mohave.otf'); } 
-// @font-face { font-family: adamcg; src: url('../fonts/adamcg.otf'); } 
-// @font-face { font-family: nevis; src: url('../fonts/nevis.ttf'); } 
-// @font-face { font-family: Anson; src: url('../fonts/anson-regular-webfont.ttf'); } 
-
-
-
-
-$smallphone: "(max-width: 560px)";
-$phone: "(min-width: 561px)";
-$tablet: "(min-width: 768px)";
-$desktop: "(min-width: 992px)";
-$largedesktop: "(min-width: 1200px)";
-
-// ------------------------Mixins-----------------------------
-
-@mixin smallphone {
-	@media #{$smallphone} {
-		@content;
-	}
-}
-
-@mixin phone {
-	@media #{$phone} {
-		@content;
-	}
-}
-
-@mixin tablet {
-	@media #{$tablet} {
-		@content;
-	}
-}
-
-@mixin desktop {
-	@media #{$desktop} {
-		@content;
-	}
-}
-
-@mixin largedesktop {
-	@media #{$largedesktop} {
-		@content; 
-	}
-}
-
-@mixin phoneOnly{
-	@media #{$phoneOnly} {
-		@content;
-	}
-}
-
-@mixin tabletOnly{
-	@media #{$tabletOnly} {
-		@content;
-	}
-}
-
+@import "mixins";
 
 // ---------------------------GENERAL RULES-----------------------------
 
+$footer-height: 100px;
 
-html, body{
+html, body {
 	height: 100%;
-}
-
-.mycontainer{
 	margin: 0;
 	padding: 0;
-	width: 100%;
 }
 
-a{
-	color: #191919;
-	&:hover{
-		text-decoration: none;
-		color: #191919;
-	}
-}
-
-
-
-h1,h2,h3,h4,h5,h6{
-	text-align: center;
-	color: #191919;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-
-}
-
-
-
-
-
-
-body{
+body {
 	color: #191919;
 	background: #eee;
-	// font-family: 'Playfair-Display',  serif;
 	font-family: 'Quattrocento', serif;
 	font-size: 16px;
 }
 
-
-
-
-
-// ------------------------Intro Section------------------------------
-section.intro{
+h1, h2, h3, h4, h5, h6 {
 	text-align: center;
-	h1{
-		font-size: 50px;
-		@include phone{
-			font-size: 70px;
-		}
-		font-weight: 300;
-		text-transform: capitalize;
-		letter-spacing: 2px;
-		text-align: center;
-		padding: 0;
-		margin: 0;
-	}
+	color: #191919;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
 
-	h2{
-		font-size: 25px;
-		@include phone{
-			font-size: 30px;
-		}
-		margin-bottom: 20px;
-	}
+.page-wrapper {
+	position: relative;
+	min-height: 100%;
+}
 
-
-	a{
-		text-decoration: underline;
-		&:hover{
-			color: black;
-		}
-	}
-
-	.weak-gray{
-		color: #999;
-		font-style: italic;
-	}
-
-	p.skills, p.tech{
-		text-indent: 0;
-	}
-	p.skills{
-		span{
-			position: relative;
-			left: 30px;
-		}
-	}
-
-	p.tech{
-		margin-bottom: 20px;
-		span{
-			position: relative;
-			left: 30px;
-		}
-	}
-
-
-
-
-
-	p{
-		margin: auto;
-		text-align: left;
-		text-indent: 30px;
-		text-align: left;
-		width: 100%;
-		margin: auto;
-		line-height: 26px;
-		&.intro{
-			margin-bottom: 10px;
-		}
-		@include tablet {
-			width: 90%;
-		}
-	}
-
-} //end of intro section---------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-// -------------------------Portfolio Section-----------------------------
-section.portfolio{
-	margin: 50px 0;
-	padding: 20px 0;
-	border-top: 1px solid #121212;
-	h2{
-		font-size: 40px;
-		margin-bottom: 30px;
-	}
-	div.portfolio-inner-container{
-		max-width: 1600px;
-		width: 98%;
-	}
-
-
-
-
-	.portfoliobox{
-		max-width: 550px;
-		border: 1px solid #121212;
-		position: relative;
-		width: 100%;	
-		height: 200px; // will be overwritten by jquery to adjust based on width
-		margin: auto;
-		margin-bottom: 20px;
-		text-align: center;
-		background: #222;
-		overflow: hidden;
-
-		@include transition(.3s ease);
-		&:hover{
-			background-size: 130% 118.75%;
-			div.transparent-box{
-				opacity: .9;
-			}
-			div.circle-plus{
-				top: 10%;
-				opacity: 1;
-			}
-		}
-
-
-		a.portfolio-modal{
-			text-decoration: none;
-			display: block;
-			height: 100%;
-		}
-		div.transparent-box{
-			position: absolute;
-			@include transition(.3s ease);
-			opacity: 0;
-			background: #222;
-			height: 100%;
-			width: 100%;
-		}
-		div.circle-plus{
-			opacity: 0;
-			top: -10%;
-			@include transition(.3s ease);
-			position: relative;;
-			display: block;
-			border-radius: 100px;
-			width: 200px;
-			height: 200px;
-			border: 2px solid white;
-			margin: auto;
-		}
-		p.portfolio-learn-more{
-			display: inline;
-			font-size: 30px;
-			@include transition(.3s ease);
-			color: white;
-			position: absolute;
-			top: 20%;
-			left: 10%;
-		}
-		p.plus{
-			color: white;
-			top: 10%;
-			left: 35%;
-			margin: auto;
-			position: absolute;
-			font-size: 120px;
-			display: block;
-		}
-	}
-
-	
-	div.kronolearn{
-		background: url('../img/portfolio/kronolearn.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-	
-
-	div.mediascore{
-		background: url('../img/portfolio/mediascore.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-	
-
-	div.checkmate{
-		background: url('../img/portfolio/checkmate-small.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-
-	div.photo{
-		background: url('../img/portfolio/photo-small.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-
-	div.sly{
-		background: url('../img/portfolio/sly-small.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-
-	div.thesis{
-		background: url('../img/portfolio/thesis-small.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-	div.frisbee{
-		background: url('../img/portfolio/frisbee-small.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-	div.sdabroad{
-		background: url('../img/portfolio/sdabroad-small.jpg') no-repeat 40% 60%;
-		background-size: 100% 100%;
-	}
-
-
-
-	// Modals, within the portfolio section still
-
-	div.modal{
-		div.modal-dialog{
-			div.modal-content{
-				h4.modal-title{
-					font-size: 23px;
-					@include tablet{
-						font-size: 30px;
-					}
-				}
-				button.close{
-					font-size: 40px;
-				}
-			}
-		}
-	}
-
-
-
+.main-content {
+	text-align: center;
+	max-width: 800px;
+	padding-bottom: $footer-height;
+	margin: auto;
 }
 
 
-// -----------------------------Footer Section-------------------------------
+h1 {
+	font-size: 50px;
+	@include phone{
+		font-size: 70px;
+	}
+	font-weight: 300;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	padding: 0;
+	margin: 0;
+}
 
-section.footer{
-	display: table;
-	border-top: 1px solid #121212;
-	height: 70px;
-	div.container{
-		display: table-cell;
-		vertical-align: middle;
+h2 {
+	font-size: 25px;
+	@include phone{
+		font-size: 30px;
 	}
-	div.social-icons-column{
+	margin-bottom: 20px;
+}
+
+.weak-gray {
+	color: #999;
+	font-style: italic;
+}
+
+a {
+	color: #191919;
+	text-decoration: underline;
+}
+
+
+p {
+	text-align: left;
+	span {
+		position: relative;
+		left: 30px;
+	}
+}
+
+footer {
+	border-top: 1px solid #222;
+	height: $footer-height;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	.social-icons {
+		display: flex;
 		height: 100%;
+		max-width: 400px;
+		margin: auto;
+		justify-content: space-between;
+		align-items: center;
 	}
-	div.social-icons{
-		font-size: 0;
-	}
-	a{
+	a {
 		font-size: 40px;
-		i{
+		i {
 			@include transition(.2s ease);
 			height: 40px;
-			width: 33.33333333333%;
+			// width: 33.33333333333%;
 			text-align: center;
 			&:hover{
+				color: black;
 				@include transform(scale(1.1));
 				@include transition(.6 ease);
 			}
 		}
 	}
-	
-
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -2,4 +2,4 @@
 !test.css
 !test.min.css
 *.css.map
-css/.sass-cache/
+.sass-cache/
